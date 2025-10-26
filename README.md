@@ -1,4 +1,4 @@
-\# Chess Game in C++
+# Chess Game in C++
 
 
 
@@ -14,15 +14,15 @@ More info coming soon!
 
 
 
-\## Features (Planned)
+## Features (Planned)
 
 
 
-\- Full Chess rules: legal moves, check, checkmate, castling, pawn promotion.
+- Full Chess rules: legal moves, check, checkmate, castling, pawn promotion.
 
-\- Two-player mode and optional AI opponent.
+- Two-player mode and optional AI opponent.
 
-\- Full UI using SDL3
+- Full UI using SDL3
 
 
 
@@ -30,7 +30,7 @@ More info coming soon!
 
 
 
-\## Getting Started
+## Getting Started
 
 
 
