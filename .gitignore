@@ -1,0 +1,17 @@
+# Visual Studio temporary files
+.vs/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+
+# Build results
+bin/
+obj/
+x64/
+Debug/
+Release/
+
+# OS files
+Thumbs.db
+.DS_Store
