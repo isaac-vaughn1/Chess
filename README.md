@@ -1,8 +1,8 @@
-# Chess Game in C++
+# C++ Chess Engine Project
 
 
 
-A C++ chess project.  
+A C++ chess engine. 
 
 
 
@@ -20,9 +20,9 @@ More info coming soon!
 
 - Full Chess rules: legal moves, check, checkmate, castling, pawn promotion.
 
-- Two-player mode and optional AI opponent.
+- Smart evaluations via tree pruning.
 
-- Full UI using SDL3
+- Integration with online platforms (e.g. Lichess)
 
 
 
