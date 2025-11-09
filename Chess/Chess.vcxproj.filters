@@ -21,10 +21,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="attacks.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="movegen.cpp">
+    <ClCompile Include="board.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,10 +29,7 @@
     <ClInclude Include="bitboard.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="attacks.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="movegen.h">
+    <ClInclude Include="board.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
