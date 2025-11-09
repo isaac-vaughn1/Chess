@@ -49,6 +49,9 @@ namespace Engine {
 
 			// helper function to split fen
 			std::vector<std::string> delimited_str_to_vector(const std::string& str, std::string delimiter);
+
+			// helper to convert algebraic square to index
+			int get_square_index(const std::string& square);
 	};
 }
 #endif

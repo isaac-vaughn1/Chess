@@ -67,13 +67,7 @@ void Engine::Board::load_fen(const std::string& fen) {
 
 	// FEN en passant square
 	if (sections[3] != "-") {
-		char file = sections[3][0];
-		char rank = sections[3][1];
-
-		int file_index = file - 'a';
-		int rank_index = rank - '1'; 
-
-		en_passant_sq = rank_index * 8 + file_index;
+		en_passant_sq = get_square_index(sections[3]);
 	}
 
 	half_move_clock = std::stoi(sections[4]);
@@ -121,4 +115,16 @@ std::vector<std::string> Engine::Board::delimited_str_to_vector(const std::strin
 	res.push_back(str.substr(pos));
 
 	return res;
+}
+
+int Engine::Board::get_square_index(const std::string& square) {
+	if (square.size() > 2 || square.size() < 2) { throw std::invalid_argument("FEN Parsing Error: Square string must be two characters (e.g. e1, h4, etc.)"); }
+
+	char file = std::tolower(static_cast<unsigned char>(square[0]));
+	char rank = square[1];
+
+	int file_index = file - 'a';
+	int rank_index = rank - '1';
+
+	return rank_index * 8 + file_index;
 }
