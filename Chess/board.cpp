@@ -116,15 +116,3 @@ std::vector<std::string> Engine::Board::delimited_str_to_vector(const std::strin
 
 	return res;
 }
-
-int Engine::Board::get_square_index(const std::string& square) {
-	if (square.size() > 2 || square.size() < 2) { throw std::invalid_argument("FEN Parsing Error: Square string must be two characters (e.g. e1, h4, etc.)"); }
-
-	char file = std::tolower(static_cast<unsigned char>(square[0]));
-	char rank = square[1];
-
-	int file_index = file - 'a';
-	int rank_index = rank - '1';
-
-	return rank_index * 8 + file_index;
-}

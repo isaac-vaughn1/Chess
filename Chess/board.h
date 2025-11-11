@@ -51,7 +51,17 @@ namespace Engine {
 			std::vector<std::string> delimited_str_to_vector(const std::string& str, std::string delimiter);
 
 			// helper to convert algebraic square to index
-			int get_square_index(const std::string& square);
+			inline static int get_square_index(const std::string& square) {
+				if (square.size() > 2 || square.size() < 2) { throw std::invalid_argument("FEN Parsing Error: Square string must be two characters (e.g. e1, h4, etc.)"); }
+
+				char file = std::tolower(static_cast<unsigned char>(square[0]));
+				char rank = square[1];
+
+				int file_index = file - 'a';
+				int rank_index = rank - '1';
+
+				return rank_index * 8 + file_index;
+			};
 	};
 }
 #endif
