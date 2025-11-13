@@ -3,11 +3,11 @@
 
 #include <iostream>
 
-typedef unsigned __int64 U64;  // bitboard representation
+typedef unsigned long long U64;  // bitboard representation
 
 namespace Engine {
 	class Bitboard {
-		private:
+		public:
 			// file masks
 			static constexpr U64 file_a = 0x0101010101010101ULL;
 			static constexpr U64 file_b = file_a << 1;
@@ -28,7 +28,6 @@ namespace Engine {
 			static constexpr U64 rank_7 = rank_1 << (8 * 6);
 			static constexpr U64 rank_8 = rank_1 << (8 * 7);
 
-		public:
 			// set the given BB's bit at the given position
 			inline static void set_bit(U64& bb, int sq) { bb |= (1ULL << sq); }
 
