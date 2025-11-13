@@ -1,12 +1,11 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include <iostream>
 #include <string>
 #include <vector>
-#include <cctype>
+#include <iostream>
 
-typedef unsigned __int64 U64;  // bitboard representation
+typedef unsigned long long U64;  // bitboard representation
 
 namespace Engine {
 	class Board {

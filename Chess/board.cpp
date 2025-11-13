@@ -1,3 +1,4 @@
+#include <cctype>
 #include "board.h"
 #include "bitboard.h"
 
